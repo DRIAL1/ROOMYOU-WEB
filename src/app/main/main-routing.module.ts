@@ -12,7 +12,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
-        
+      { path: 'rooms', loadChildren: () => import('./rooms/rooms.module').then(m => m.RoomsModule) },
     ]
   }
 ];
