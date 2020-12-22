@@ -54,5 +54,6 @@
   "ROOMS": "Habitaciones",
   "ROOM": "Habitación",
   "FLAT": "Piso",
-  "USER": "Usuario"
+  "USER": "Usuario",
+  "PRICE": "Precio"
 }

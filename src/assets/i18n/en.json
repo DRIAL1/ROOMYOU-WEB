@@ -53,5 +53,6 @@
   "ROOMS": "Rooms",
   "ROOM": "Room",
   "FLAT": "Flat",
-  "USER": "User"
+  "USER": "User",
+  "PRICE": "Price"
 }

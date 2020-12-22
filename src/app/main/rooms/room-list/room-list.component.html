@@ -1,10 +1,12 @@
 <div fxFlex>
     <o-table fxFlex attr="roomsTable" service="rooms"  entity="room"  keys="room_id"
-      columns="room_id;flat_id;user_" visible-columns="room_id;flat_id;user_"
-      editable-columns="room_id;flat_id;user_"query-rows="20">
+      columns="room_id;flat_id;user_;price" visible-columns="room_id;flat_id;user_;price"
+      editable-columns="room_id;flat_id;user_;price"query-rows="20" horizontal-scroll=yes>
       <o-table-column attr="room_id" title="ROOM" orderable="yes" searchable="yes" type="text"></o-table-column>
       <o-table-column attr="flat_id" title="FLAT" orderable="yes" searchable="no" type="text"></o-table-column>
       <o-table-column attr="user_" title="USER" orderable="no" searchable="no" type="text" ></o-table-column>
+      <o-table-column attr="price" title="PRICE" orderable="no" searchable="no" type="currency" currency-symbol="€"
+      currency-symbol-position="right" grouping="yes" thousand-separator="." decimal-separator="," max-decimal-digits="2"></o-table-column>
     </o-table>
 </div>
 
