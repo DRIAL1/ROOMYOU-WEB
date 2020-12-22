@@ -1,6 +1,10 @@
 <div fxFlex>
-    <o-table fxFlex attr="roomsTable" service="rooms" entity="room" keys="room_id" 
-      columns="room_id;flat_id;user_"
-      visible-columns="room_id;flat_id;user_" query-rows="20">
+    <o-table fxFlex attr="roomsTable" service="rooms"  entity="room"  keys="room_id"
+      columns="room_id;flat_id;user_" visible-columns="room_id;flat_id;user_"
+      editable-columns="room_id;flat_id;user_"query-rows="20">
+      <o-table-column attr="room_id" title="ROOM" orderable="yes" searchable="yes" type="text"></o-table-column>
+      <o-table-column attr="flat_id" title="FLAT" orderable="yes" searchable="no" type="text"></o-table-column>
+      <o-table-column attr="user_" title="USER" orderable="no" searchable="no" type="text" ></o-table-column>
     </o-table>
 </div>
+

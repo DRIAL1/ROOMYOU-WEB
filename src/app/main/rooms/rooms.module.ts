@@ -9,7 +9,10 @@ import { OntimizeWebModule } from 'ontimize-web-ngx';
 
 
 @NgModule({
-  declarations: [RoomDetailComponent, RoomListComponent, RoomNewComponent],
+  declarations: [
+    RoomDetailComponent,
+    RoomListComponent,
+    RoomNewComponent],
   imports: [
     CommonModule,
     RoomsRoutingModule,

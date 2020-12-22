@@ -49,5 +49,9 @@
   "ANID": "Account",
   "ENDDATE": "End date",
   "INTERESRATE": "% Interest",
-  "ACCOUNTTYP": "Account type"
+  "ACCOUNTTYP": "Account type",
+  "ROOMS": "Rooms",
+  "ROOM": "Room",
+  "FLAT": "Flat",
+  "USER": "User"
 }
