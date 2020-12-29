@@ -1,1 +1,14 @@
-<p>room-new works!</p>
+<o-form service="rooms" entity="room" keys="room_id" header-actions="R;I;U;D" show-header-actions="true">
+    <o-text-input attr="ROOM_ID" sql-type="INTEGER"></o-text-input>
+    <!-- Esto lo ponemos en comentarios para que no aparezca, rollo visible. 
+        Así nadie puede modificarlo y nos va a aparecer igual después. -->
+    <!-- Aquí, la clave primaria tiene que ir en mayúscula sí o sí
+    No especificamos el tipo de variable que es porque lo genera automáticamente la base de datos, MIRAR BBDD.
+    Podemos  -->
+    <o-list-picker attr="FLAT_ID" service="flats" entity="flat" keys="flat_id" visible-columns="FLAT_ID" value-column="FLAT_ID"></o-list-picker>
+    <!-- <o-list-picker attr="USER_" service="users" entity="user" keys="USER_" visible-columns="USER_" value-column="USER_"></o-list-picker> -->
+    <!-- Con esto, nos aparecerá una lupa y ahí miraremos los usuarios ya creados, para que no se repitan -->
+    <!-- <o-text-input attr="USER_"></o-text-input> -->
+    <o-combo attr="USER_" service="users" entity="user" keys="USER_" visible-columns="USER_" value-column="USER_"></o-combo>
+    <o-currency-input attr="PRICE" min-decimal-digits="1"></o-currency-input>
+</o-form>
