@@ -1,13 +1,14 @@
-<o-form service="rooms" entity="room" keys="room_id" header-actions="R;I;U;D" show-header-actions="true">
+<o-form service="flats" entity="roomDetails" keys="room_id" header-actions="R;I;U;D" show-header-actions="true">
     <o-text-input attr="room_id" sql-type="INTEGER" enabled="no"></o-text-input>
     <!-- Hay que añadir el tipo de variable que es -->
     <o-text-input attr="FLAT_ID" sql-type="INTEGER"></o-text-input>
-    <o-text-input attr="USER_"></o-text-input>
+
+    <o-text-input attr="CITY"></o-text-input>
     <!-- Si lo vemos desde la perspectiva de quien registra la habitación, igual no es necesario que aparezca su nombre de usuario aquí -->
     <o-currency-input attr="PRICE" min-decimal-digits="1"></o-currency-input>
     <!-- Price tiene que ir en mayúsculas, no es en función de cómo lo tengamos en la base de datos, si no que hay que ponerlo en mayúsculas sí o sí -->
     <!-- Las claves primarias, tienen que ir igual a las de la base de datos sí o sí. El resto, en mayúsculas y ya -->
     <!-- ¡OJO! Esto sólo afecta en la modificación, en la creación funciona diferente -->
-    <!-- El botón de eliminar da un error, pero en cambio si le damos a refrescar sí que nos lo ha eliminado. 
+    <!-- El botón de eliminar da un error, pero en cambio si le damos a refrescar sí que nos lo ha eliminado.
     No sabemos qué pasa ahí -->
 </o-form>
