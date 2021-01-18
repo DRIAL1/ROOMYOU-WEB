@@ -54,6 +54,10 @@
   "ROOMS": "Habitaciones",
   "ROOM": "Habitación",
   "FLAT": "Piso",
+  "FLAT_ID":"Piso",
   "USER": "Usuario",
-  "PRICE": "Precio"
+  "PRICE": "Precio",
+  "CITY": "Localidad",
+  "room_id": "Habitación",
+  "Flat": "Piso"
 }

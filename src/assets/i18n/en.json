@@ -54,5 +54,8 @@
   "ROOM": "Room",
   "FLAT": "Flat",
   "USER": "User",
-  "PRICE": "Price"
+  "PRICE": "Price",
+  "CITY": "City",
+  "FLAT_ID": "Flat",
+  "room_id": "Room"
 }
