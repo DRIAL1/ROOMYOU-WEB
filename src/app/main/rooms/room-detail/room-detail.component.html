@@ -1,11 +1,6 @@
 <o-form service="flats" entity="roomDetails" keys="room_id" header-actions="R;I;U;D" show-header-actions="true">
-  <o-row attr="container" title="Initial Data" icon="check" layout-align="start stretch" elevation="1" appearance="none">
-  <o-text-input attr="room_id" sql-type="INTEGER" enabled="no"></o-text-input>
-    <!-- Hay que añadir el tipo de variable que es -->
-    <o-text-input attr="FLAT_ID" sql-type="INTEGER"></o-text-input>
-  </o-row>
   <o-row attr="container" title="Location" icon="check" layout-align="start stretch" elevation="2" appearance="none">
-    <o-text-input attr="CITY"></o-text-input>
+    <!-- <o-text-input attr="CITY"></o-text-input> -->
     <o-text-input attr="STREET_NAME" sql-type="TEXT"></o-text-input>
     <!-- Si lo vemos desde la perspectiva de quien registra la habitación, igual no es necesario que aparezca su nombre de usuario aquí -->
     <o-text-input attr="STREET_NUMBER" ></o-text-input>
@@ -13,20 +8,44 @@
     <o-text-input attr="DOOR"></o-text-input>
     <o-text-input attr="CITY"></o-text-input>
     <o-text-input attr="PROVINCE"></o-text-input>
-    <o-text-input attr="POSTAL_CODE"></o-text-input>
+    <!-- <o-text-input attr="POSTAL_CODE"></o-text-input> -->
   </o-row>
+
+  <o-integer-input oHidden="yes" attr="room_id">  </o-integer-input>
+
+  <o-row>
+    <o-list #properties parent-keys="room_id" attr="properties" title="rooms" service="properties" entity="propertyDetails"
+    keys="property_id" columns="property_id;room_id;flat_id;property_txt;property_binary;property_number;propertytype_id;propertydesc">
+    <o-list-item *ngFor="let row of properties.dataArray">
+      <o-list-item-text #item title="{{ row.propertydesc }}" primary-text="{{ row.property_txt }}"
+        secondary-text="{{ row.property_number }}">
+      </o-list-item-text>
+    </o-list-item>
+  </o-list>
+  </o-row>
+
+
+
+
+  <!-- <o-row attr="container" title="Initial Data" icon="check" layout-align="start stretch" elevation="1" appearance="none">
+  <o-text-input attr="room_id" sql-type="INTEGER" enabled="no"></o-text-input>
+    Hay que añadir el tipo de variable que es
+     <o-text-input attr="FLAT_ID" sql-type="INTEGER"></o-text-input>
+  </o-row>
+
   <o-row attr="container" title="Rental details" icon="check" layout-align="start stretch" elevation="2" appearance="none">
   <o-currency-input attr="PRICE" min-decimal-digits="1"></o-currency-input>
-   <!-- Price tiene que ir en mayúsculas, no es en función de cómo lo tengamos en la base de datos, si no que hay que ponerlo en mayúsculas sí o sí -->
-    <!-- Las claves primarias, tienen que ir igual a las de la base de datos sí o sí. El resto, en mayúsculas y ya -->
-    <!-- ¡OJO! Esto sólo afecta en la modificación, en la creación funciona diferente -->
-    <!-- El botón de eliminar da un error, pero en cambio si le damos a refrescar sí que nos lo ha eliminado.
-    No sabemos qué pasa ahí -->
-  </o-row>
+    Price tiene que ir en mayúsculas, no es en función de cómo lo tengamos en la base de datos, si no que hay que ponerlo en mayúsculas sí o sí
+     Las claves primarias, tienen que ir igual a las de la base de datos sí o sí. El resto, en mayúsculas y ya
+     ¡OJO! Esto sólo afecta en la modificación, en la creación funciona diferente
+    El botón de eliminar da un error, pero en cambio si le damos a refrescar sí que nos lo ha eliminado.
+    No sabemos qué pasa ahí
+  < </o-row>  -->
 </o-form>
-<o-form service="properties" entity="propertyDetails" header-actions="R;I;U;D" show-header-actions="true">
+
+<!-- <o-form service="properties" entity="propertyDetails" header-actions="R;I;U;D" show-header-actions="true">
   <o-row attr="container" title="Room Properties" icon="check" layout-align="start stretch" elevation="1" appearance="none">
     <o-text-input attr="PROPERTY_ID" sql-type="INTEGER"></o-text-input>
-    <!-- No funciona, revisar bien el rest -->
+     No funciona, revisar bien el rest
   </o-row>
-</o-form>
+</o-form> -->

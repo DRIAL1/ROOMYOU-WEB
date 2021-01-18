@@ -5,4 +5,7 @@ export const SERVICE_CONFIG: Object = {
   "flats":{
     'path': '/flats'
   },
+  "properties":{
+    'path': '/properties'
+  },
 };
