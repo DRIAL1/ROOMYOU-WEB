@@ -1,17 +1,17 @@
 <div fxFlex>
     <o-grid #room attr="roomsTable" service="flats" entity="roomDetails" keys="room_id"
-    columns="room_id;flat_id;user_;price" show-page-size="yes" page-size-options="24;32;64">
+    columns="room_id;flat_id;user_;price;photo;city;province" show-page-size="yes" page-size-options="24;32;64">
       <o-grid-item *ngFor="let list of room.dataArray">
-        <o-column layout-padding class="container-item">
-          <img [src]="list.thumbnailUrl" style="margin-top:8px" alt="just a test image">
-          <h4> {{ list.room_id }} </h4>
-          <div class="Flat">
-            <mat-icon></mat-icon><span>{{ list.flat_id }}</span>
+        <div fxLayout="column" fxLayoutAlign="space-evenly center"
+        class="mat-elevation-z1">
+          <img [src]="getImageSrc(list.photo)" style="margin-top:8px" width="256px" height="256px" alt="just a test image">
+          <div class="city">
+            <span> {{ list.city }} - {{ list.province }} </span>
           </div>
-          <div class="Price">
-            <mat-icon></mat-icon><span>{{ list.price }}</span>
+          <div class="price">
+            <mat-icon></mat-icon><span>{{ list.price }} €</span>
           </div>
-        </o-column>
+        </div>
       </o-grid-item>
     </o-grid>
     <!-- <o-table fxFlex  attr="roomsTable" service="flats"  entity="room"  keys="room_id"
