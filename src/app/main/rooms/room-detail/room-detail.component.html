@@ -1,28 +1,46 @@
-<o-form service="flats" entity="roomDetails" keys="room_id" header-actions="R;U;D" show-header-actions="true">
-  <o-row attr="container" title="Location" icon="check" layout-align="start stretch" elevation="2" appearance="none">
+<o-form service="flats" entity="roomDetails" keys="room_id" header-actions="R;I;U;D" show-header-actions="true">
+  <o-row class="detailproperties" attr="container" title="Location" icon="check" layout-align="start stretch" elevation="2" appearance="none">
     <!-- <o-text-input attr="CITY"></o-text-input> -->
-    <o-text-input attr="STREET_NAME" sql-type="TEXT"></o-text-input>
+    <o-text-input class="properties" attr="STREET_NAME" sql-type="TEXT"></o-text-input>
     <!-- Si lo vemos desde la perspectiva de quien registra la habitación, igual no es necesario que aparezca su nombre de usuario aquí -->
-    <o-text-input attr="STREET_NUMBER" ></o-text-input>
-    <o-text-input attr="FLOOR"></o-text-input>
-    <o-text-input attr="DOOR"></o-text-input>
-    <o-text-input attr="CITY"></o-text-input>
-    <o-text-input attr="PROVINCE"></o-text-input>
+    <o-text-input class="properties" attr="STREET_NUMBER" ></o-text-input>
+    <o-text-input class="properties" attr="FLOOR"></o-text-input>
+    <o-text-input class="properties" attr="DOOR"></o-text-input>
+    <o-text-input class="properties" attr="CITY"></o-text-input>
+    <o-text-input class="properties" attr="PROVINCE"></o-text-input>
     <!-- <o-text-input attr="POSTAL_CODE"></o-text-input> -->
   </o-row>
 
-  <o-integer-input oHidden="yes" attr="room_id">  </o-integer-input>
+  <o-integer-input  attr="room_id">  </o-integer-input>
+  <!-- <o-integer-input oHidden="yes" attr="flat_id">  </o-integer-input> -->
 
-  <o-row>
-    <o-list #properties parent-keys="room_id" attr="properties" title="rooms" service="properties" entity="propertyDetails"
+   <div>
+     <o-row class="detailproperties" attr="container" title="Room" icon="check" layout-align="start stretch" elevation="2" appearance="none">
+    <o-list #propertiesR parent-keys="room_id" attr="properties" title="Properties" service="properties" entity="propertyDetails"
     keys="property_id" columns="property_id;room_id;flat_id;property_txt;property_binary;property_number;propertytype_id;propertydesc">
     <o-list-item *ngFor="let row of properties.dataArray">
-      <o-list-item-text #item title="{{ row.propertydesc }}" primary-text="{{ row.property_txt }}"
+      <o-list-item-text  class="properties" #item title="{{ row.propertydesc }}" primary-text="{{ row.property_txt }}"
         secondary-text="{{ row.property_number }}">
       </o-list-item-text>
     </o-list-item>
   </o-list>
   </o-row>
+</div>
+
+  <div>
+    <o-integer-input  attr="flat_id">  </o-integer-input>
+
+  <o-row class="detailproperties" attr="container" title="Flat" icon="check" layout-align="start stretch" elevation="2" appearance="none">
+    <o-list #properties parent-keys="flat_id" attr="properties" title="Properties" service="properties" entity="propertyDetails"
+    keys="property_id" columns="property_id;room_id;flat_id;property_txt;property_binary;property_number;propertytype_id;propertydesc">
+    <o-list-item *ngFor="let row of properties.dataArray">
+      <o-list-item-text class="properties2" #item title="{{ row.propertydesc }}" primary-text="{{ row.property_txt }}"
+        secondary-text="{{ row.property_number }}">
+      </o-list-item-text>
+    </o-list-item>
+  </o-list>
+  </o-row>
+</div>
 
 
 
