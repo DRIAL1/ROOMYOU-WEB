@@ -2,13 +2,6 @@
 
   <o-row attr="row1" layout-align="start stretch">
 
-    <o-column title="ROOM_DATA" layout-align="start stretch" fxFlex="60" layout-padding>
-      <div fxLayout="row" fxLayoutAlign="start center">
-        <o-text-input attr="room_id" fxFlex="30" class="margin-right-24" required="yes"></o-text-input>
-        <div fxFlex></div>
-
-      </div>
-
       <!-- <div fxLayout="row" fxLayoutAlign="start center">
         <o-text-input attr="STREET_NAME" class="margin-right-24" fxFlex.lg="30" fxFlex.xl="30" fxFlex="50"></o-text-input>
         <o-text-input attr="STREET_NUMBER" fxFlex="50" required="yes"></o-text-input>
@@ -17,14 +10,23 @@
       </div> -->
 
       <div fxLayout="row" fxLayoutAlign="start center">
-        <o-text-input attr="flat_id" fxFlex="30" required="yes" enabled="yes" >
-        </o-text-input>
+        <o-list-picker service="flats" entity="flat" attr="flat_id" enabled="yes" keys="flat_id"
+        columns="flat_id;street_name;street_number;floor;door;city;province" separator=" "
+        visible-columns="street_name;street_number;floor;door;city;province" value-column="flat_id"></o-list-picker>
       </div>
 
-    </o-column>
-    <o-column fxFlex="40" layout-align="center center">
+      <o-column>
+        <o-text-input attr="street_name"></o-text-input>
+        <o-text-input attr="street_number" sql-type="INTEGER"></o-text-input>
+        <o-text-input attr="floor" sql-type="INTEGER"></o-text-input>
+        <o-text-input attr="door"></o-text-input>
+        <o-text-input attr="city"></o-text-input>
+        <o-text-input attr="province"></o-text-input>
+        <o-text-input attr="postal_code" sql-type="INTEGER"></o-text-input>
+      </o-column>
+    <!-- <o-column fxFlex="40" layout-align="center center">
       <o-image attr="PHOTO" fxFill class="customer-picture" empty-image="./assets/images/no-image.png"></o-image>
-    </o-column>
+    </o-column> -->
   </o-row>
 
   <div layout-padding></div>
