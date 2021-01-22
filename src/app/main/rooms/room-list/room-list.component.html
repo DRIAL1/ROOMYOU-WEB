@@ -1,5 +1,6 @@
-<o-form service="flats" entity="roomDetails" keys="room_id" header-actions="R;I;U;D" show-header-actions="true">
+<!-- <o-form service="flats" entity="roomDetails" keys="room_id" header-actions="R;I;U;D" show-header-actions="true"> -->
 <div fxFlex>
+  <a oHidden mat-raised-button [routerLink]="['new']">New</a>
     <o-grid #room attr="roomsTable" service="flats" entity="roomDetails" keys="room_id"
     columns="room_id;flat_id;user_;price;photo;city;province"
     quick-filter-columns="price;city;province" show-page-size="yes"
@@ -30,5 +31,5 @@
       <o-table-columns-filter columns="price" ></o-table-columns-filter>
     </o-table> -->
   </div>
-  </o-form>
+  <!-- </o-form> -->
 

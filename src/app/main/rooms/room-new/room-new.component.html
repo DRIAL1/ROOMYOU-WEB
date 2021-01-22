@@ -1,10 +1,10 @@
-<o-form attr="rooms_form_edit" service="flats" entity="room" keys="room_id" fxLayout="column" show-header="yes" header-actions="R;I;U;D">
+<o-form attr="rooms_form_edit" service="flats" entity="room" keys="room_id" fxLayout="column" show-header="yes" >
 
   <o-row attr="row1" layout-align="start stretch">
 
     <o-column title="ROOM_DATA" layout-align="start stretch" fxFlex="60" layout-padding>
       <div fxLayout="row" fxLayoutAlign="start center">
-        <o-text-input attr="ROOM_ID" fxFlex="30" class="margin-right-24" required="yes"></o-text-input>
+        <o-text-input attr="room_id" fxFlex="30" class="margin-right-24" required="yes"></o-text-input>
         <div fxFlex></div>
 
       </div>
@@ -17,9 +17,7 @@
       </div> -->
 
       <div fxLayout="row" fxLayoutAlign="start center">
-        <o-text-input attr="FLAT_ID" fxFlex="30" query-on-init="no" query-on-bind="no" required="yes" enabled="yes" filter="no"
-          value-column="FLAT_ID" service="flats" entity="flat" keys="flat_id" columns="flat_id;street_name;street_number"
-          visible-columns="street_name;street_number;city;province" separator=" - ">
+        <o-text-input attr="flat_id" fxFlex="30" required="yes" enabled="yes" >
         </o-text-input>
       </div>
 
