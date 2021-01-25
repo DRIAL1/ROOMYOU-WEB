@@ -11,15 +11,25 @@
 
 }
 .flatform{
-  margin-right: 100px;
+  margin-right: 40px;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left:50px;
+  margin-left:40px;
   /* border-color: rgb(236, 202, 50);
   border-width: 5px;
   border-style: solid; */
   color:rgb(236, 202, 50);
+  font-weight:100;
 }
+.priceform{
+  margin-right: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left:50px;
+  color:rgb(236, 202, 50);
+  font-weight: 100;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;

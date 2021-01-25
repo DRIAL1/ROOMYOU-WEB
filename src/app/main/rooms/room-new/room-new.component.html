@@ -2,7 +2,7 @@
   <o-form attr="rooms_form_edit" service="flats" entity="room" keys="room_id" fxLayout="column" show-header="yes"
   #oForm after-insert-mode="detail" class="standalone-form-container">
 
-  <o-row class="material-icons" attr="row1" icon="business" title="Existing Flat" fxLayoutAlign="space-evenly center">
+  <o-row class="material-icons" attr="row1" icon="business" title="Room info" fxLayoutAlign="space-evenly center">
 
 
       <!-- <div fxLayout="row" fxLayoutAlign="start center">
@@ -12,35 +12,39 @@
         <o-text-input attr="PROVINCE" fxFlex="50" required="yes"></o-text-input>
       </div> -->
 
-      <div class="flatsearcher" fxLayout="row" layout-align="start stretch" fxFlex.lg="30" fxFlex.xl="30"
-      fxFlex="20" fxLayoutGap="26px" layout-padding>
+      <div class="flatsearcher" fxLayout="row" layout-align="start stretch" fxFlex="20" fxLayoutGap="26px" layout-padding>
         <o-list-picker service="flats" entity="flat" attr="flat_id" enabled="yes" keys="flat_id"
         columns="flat_id;street_name;street_number;floor;door;city;province" separator=" "
         visible-columns="street_name;street_number;floor;door;city;province" value-column="flat_id"></o-list-picker>
       </div>
       <br>
-      <o-column fxFlex="50" layout-align="center center">
-        <o-image attr="PHOTO" fxFill class="customer-picture" empty-image="./assets/images/no-image.png"></o-image>
-        </o-column>
-    </o-row>
-    <o-row attr="row2" icon="info" title="New Flat" fxLayoutAlign="space-evenly center" layout-padding color="accent">
-      <div class="flatform"  fxFlex="35" fxLayoutGap="40px" layout-padding>
-          <o-column  fxLayout="column" fxLayoutAlign="space-evenly right">
-            <o-text-input attr="street_name"></o-text-input>
-            <o-text-input attr="street_number" sql-type="INTEGER"></o-text-input>
-            <o-text-input attr="floor" sql-type="INTEGER"></o-text-input>
-            <o-text-input attr="door"></o-text-input>
-            <o-text-input attr="city"></o-text-input>
-            <o-text-input attr="province"></o-text-input>
-            <o-text-input attr="postal_code" sql-type="INTEGER"></o-text-input>
+      <o-row attr="row2" class="priceform" icon="fiber_new" title="New Flat Info" fxFlex="50" layout-padding>
+        <div class="flatform"  fxFlex="60" layout-padding>
+            <o-column  fxLayout="column" fxLayoutAlign="space-evenly right">
+              <o-text-input attr="street_name"></o-text-input>
+              <o-text-input attr="street_number" sql-type="INTEGER"></o-text-input>
+              <o-text-input attr="floor" sql-type="INTEGER"></o-text-input>
+              <o-text-input attr="door"></o-text-input>
+              <o-text-input attr="city"></o-text-input>
+              <o-text-input attr="province"></o-text-input>
+              <o-text-input attr="postal_code" sql-type="INTEGER"></o-text-input>
+            </o-column>
+        </div>
+      </o-row>
+        <br>
+        <o-column fxFlex="25" layout-align="below-center">
+          <o-image attr="PHOTO" fxFill class="customer-picture" empty-image="./assets/images/no-image.png"></o-image>
           </o-column>
-      </div>
-      <br>
-       <o-column fxFlex="50" layout-align="center center">
-      <o-image attr="PHOTO" fxFill class="customer-picture" empty-image="./assets/images/no-image.png"></o-image>
-      </o-column>
-
     </o-row>
+    <o-row attr="row3" class="priceform" icon="attach_money" title="Rental Info" fxFlex="20" layout-padding>
+      <o-text-input attr="price" sql-type="INTEGER" currency-symbol="€"></o-text-input>
+    </o-row>
+    <!-- <o-row attr="row3" class="propertiesform" icon="">
+      <o-text-input attr="propertydesc"></o-text-input>
+      <o-list-picker service="properties" entity="propertyType" keys="property_id" columns="property_id;property_txt;propertytype_id;propertydesc" visible-columns="propertydesc"></o-list-picker>
+    </o-row> -->
+
+
 
 
 
