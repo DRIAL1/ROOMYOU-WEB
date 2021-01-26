@@ -1,7 +1,7 @@
 <o-form service="flats" entity="roomDetails" keys="room_id" header-actions="R;I;U;D" show-header-actions="true">
   <o-row class="detailproperties" attr="container" title="Location" icon="location_on" layout-align="center center" elevation="1" appearance="none">
-    <o-text-input class="properties" fxFlex="25"attr="STREET_NAME" sql-type="TEXT"></o-text-input>
-    <o-text-input class="properties" fxFlex="25" attr="STREET_NUMBER" ></o-text-input>
+    <o-text-input class="properties" fxFlex="30"attr="STREET_NAME" sql-type="TEXT"></o-text-input>
+    <o-text-input class="propertiesnumber" fxFlex="25" attr="STREET_NUMBER" ></o-text-input>
     <o-text-input class="properties" attr="FLOOR"></o-text-input>
     <o-text-input class="properties" attr="DOOR"></o-text-input>
     <o-text-input class="properties" attr="CITY"></o-text-input>
@@ -13,7 +13,7 @@
   <!-- <o-integer-input oHidden="yes" attr="flat_id">  </o-integer-input> -->
 
    <div class="roomsdiv">
-     <o-row class="detailproperties" attr="container" title="Room" icon="meeting_room" layout-align="start stretch" elevation="2" appearance="none">
+     <o-row class="detailproperties" attr="container" title="Room" icon="meeting_room" style="font-color: yellow" layout-align="start stretch" elevation="2" appearance="none">
     <o-list #propertiesR parent-keys="room_id" attr="properties" title="Properties" service="properties" entity="propertyRoom"
     keys="property_id" columns="property_id;room_id;property_txt;property_binary;property_number;propertytype_id;propertydesc">
     <o-list-item *ngFor="let row of propertiesR.dataArray">

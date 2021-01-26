@@ -1,13 +1,14 @@
 .detailproperties{
-  font-size: 25px;
+  font-size: 20px;
+  font-color: yellow;
   /* background-color: aliceblue; */
 }
 .properties{
-  font-size: 25px;
+  font-size: 20px;
   /* background-color: aliceblue; */
 }
 .propertiesnumber{
-  font-size: 25px;
+  font-size: 20px;
   margin-right: 30px;
   margin-top: auto;
   margin-bottom:auto;
