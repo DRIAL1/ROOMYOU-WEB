@@ -57,5 +57,25 @@
   "PRICE": "Price",
   "CITY": "City",
   "FLAT_ID": "Flat",
-  "room_id": "Room"
+  "room_id": "Room",
+  "STREET_NAME":"Street name",
+  "STREET_NUMBER":"Street number",
+  "FLOOR":"Floor",
+  "DOOR":"Door",
+  "PROVINCE":"Province",
+  "Room":"Room",
+  "Room info":"Room's Information",
+  "flat_id":"Existing Flat",
+  "New Flat Info":"New Flat's Information",
+  "street_name":"Street name",
+  "street_number": "Street number",
+  "floor":"Floor",
+  "door":"Door",
+  "province":"Province",
+  "postal_code":"Postal Code",
+  "city":"City",
+  "Rental Info": "Rental Information",
+  "price":"Price"
+
+
 }

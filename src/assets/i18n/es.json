@@ -59,5 +59,25 @@
   "PRICE": "Precio",
   "CITY": "Localidad",
   "room_id": "Habitación",
-  "Flat": "Piso"
+  "Flat": "Piso",
+  "STREET_NAME":"Nombre de la calle",
+  "STREET_NUMBER":"Número",
+  "FLOOR":"Piso",
+  "DOOR":"Puerta",
+  "PROVINCE":"Provincia",
+  "Room":"Habitación",
+  "Properties":"Propiedades",
+  "Room info":"Información de la Habitación",
+  "flat_id":"Piso Existente",
+  "New Flat Info":"Información de un Nuevo Piso",
+  "street_name":"Nombre de la calle",
+  "street_number": "Número",
+  "floor":"Piso",
+  "door":"Puerta",
+  "province":"Provincia",
+  "postal_code":"Código Postal",
+  "city":"Ciudad",
+  "Rental Info": "Información del Alquiler",
+  "price":"Precio"
+
 }
