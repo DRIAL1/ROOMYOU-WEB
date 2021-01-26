@@ -13,11 +13,11 @@
   <!-- <o-integer-input oHidden="yes" attr="flat_id">  </o-integer-input> -->
 
    <div class="roomsdiv">
-     <o-row class="detailproperties" attr="container" title="Room" icon="meeting_room" style="font-color: yellow" layout-align="start stretch" elevation="2" appearance="none">
+     <o-row class="detailproperties" attr="container" title="Room" icon="meeting_room" layout-align="start stretch" elevation="2" appearance="none">
     <o-list #propertiesR parent-keys="room_id" attr="properties" title="Properties" service="properties" entity="propertyRoom"
     keys="property_id" columns="property_id;room_id;property_txt;property_binary;property_number;propertytype_id;propertydesc">
     <o-list-item *ngFor="let row of propertiesR.dataArray">
-      <o-list-item-text  class="propertiesitem" #item title="{{ row.propertydesc }}" primary-text="{{ row.property_txt }}"
+      <o-list-item-text  class="detailproperties" #item title="{{ row.propertydesc }}" primary-text="{{ row.property_txt }}"
         secondary-text="{{ row.property_number }}">
       </o-list-item-text>
     </o-list-item>
@@ -31,7 +31,7 @@
   <o-list #properties parent-keys="flat_id" attr="properties" title="Properties" service="properties" entity="propertyFlat"
   keys="property_id" columns="property_id;flat_id;property_txt;property_binary;property_number;propertytype_id;propertydesc">
   <o-list-item *ngFor="let row of properties.dataArray">
-    <o-list-item-text class="properties2" #item title="{{ row.propertydesc }}" primary-text="{{ row.property_txt }}"
+    <o-list-item-text class="detailproperties" #item title="{{ row.propertydesc }}" primary-text="{{ row.property_txt }}"
       secondary-text="{{ row.property_number }}">
     </o-list-item-text>
   </o-list-item>
