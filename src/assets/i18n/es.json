@@ -78,6 +78,7 @@
   "postal_code":"Código Postal",
   "city":"Ciudad",
   "Rental Info": "Información del Alquiler",
-  "price":"Precio"
+  "price":"Precio",
+  "Location":"Dirección"
 
 }
